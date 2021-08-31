@@ -14,7 +14,7 @@
 				<div class="img">
 					<img src=" ">
 					<div class="hz">
-						<img src=" " id="shangyi">
+						<img src=" " id="shangyi" ondrop="drop(event)" ondragover="allowDrop(event)">
 					</div>
 					<div class="hz hz2">
 						<img src=" " id="kuzi">
@@ -32,14 +32,14 @@
 
 		<!--material area-->
 		<div class="right_item div1">
-			<h3>Clothing library</h3>
+			<h3>wardrobe</h3>
 			<div>
 				<div>
 					<span class="name">Tops/trousers</span>
 					<div class="box">
 						<div class="xiaotu">
 							<div class="shangyi">
-								<img src=" " alt="">
+								<img src="Images/hat_test.png" alt="" id="hat1" draggable="true" ondragstart="drag(event)">
 								<img src=" " alt="">
 								<img src=" " alt="">
 							</div>
@@ -94,6 +94,25 @@
 	
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript">
+
+	function allowDrop(ev) {
+	ev.preventDefault();
+	}
+
+	function drag(ev) {
+	ev.dataTransfer.setData("text", ev.target.id);
+	}
+
+	function drop(ev) {
+	ev.preventDefault();
+	var data = ev.dataTransfer.getData("text");
+	ev.target.appendChild(document.getElementById(data));
+	}
+
+	</script>
+
+	<!--
+	<script type="text/javascript">
 		$(".hztz").hide();
 		
 		$(".shangyi img").click(function(){
@@ -135,7 +154,11 @@
 			var imgpath = $(this).attr("src");
 			$("#taozhuang").attr("src",imgpath)
 		})
-		
-	
-	</script>
+			</script>
+-->
+
+
+
+
+
 </body>

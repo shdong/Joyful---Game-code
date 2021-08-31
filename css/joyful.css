@@ -5,7 +5,7 @@
 			padding: 20px;
 			display: flex;
 			justify-content: space-between;
-			background-color: antiquewhite;
+			background-color: #E2F2F4;
 			
 		}
 		body{
@@ -47,6 +47,9 @@
 			position: absolute;
 			bottom: 5px;
 			left: 0;
+			border:1px solid #333
+			width: 300px;
+			height:300px;
 		}
 		img{
 			width: 100%;
