@@ -9,12 +9,12 @@
 	<div class="content">
 		<!--Display area-->
 		<div class="left_show div1">
-			<h3></h3>
+			<h3>Bird<h3>
 			<div class="show_img">
 				<div class="img">
-					<img src=" ">
-					<div class="hz">
-						<img src=" " id="shangyi" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<img src="Images/bird_test.jpg">
+					<div class="hz" id="hat" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<!--	<img src=" " id="shangyi">  -->
 					</div>
 					<div class="hz hz2">
 						<img src=" " id="kuzi">
@@ -93,23 +93,24 @@
 
 	
 	<script src="js/jquery-3.4.1.min.js"></script>
-	<script type="text/javascript">
 
-	function allowDrop(ev) {
-	ev.preventDefault();
-	}
+        <script type="text/javascript">
 
-	function drag(ev) {
-	ev.dataTransfer.setData("text", ev.target.id);
-	}
+        function allowDrop(ev) {
+        ev.preventDefault();
+        }
 
-	function drop(ev) {
-	ev.preventDefault();
-	var data = ev.dataTransfer.getData("text");
-	ev.target.appendChild(document.getElementById(data));
-	}
+        function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+        }
 
-	</script>
+        function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+        }
+
+        </script>
 
 	<!--
 	<script type="text/javascript">
@@ -156,7 +157,6 @@
 		})
 			</script>
 -->
-
 
 
 
